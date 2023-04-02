@@ -1,10 +1,10 @@
 from django.contrib import admin
-from movie_award.models import Movie, Studio, Producer
+from movies.models import Movie, Studio, Producer
 
 class Movies(admin.ModelAdmin):
-    list_display = ('id', 'title', 'year')
-    list_display_links = ('id', 'title', 'year')
-    search_fields = ('id', 'title', 'year')
+    list_display = ('id', 'title', 'year', 'winner')
+    list_display_links = ('id', 'title', 'year', 'winner')
+    search_fields = ('id', 'title', 'year', 'winner')
 
 admin.site.register(Movie, Movies)
 

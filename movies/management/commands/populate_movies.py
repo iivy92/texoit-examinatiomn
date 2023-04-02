@@ -1,6 +1,5 @@
 from django.core.management.base import BaseCommand
-import tablib
-from movie_award.models import Movie, Studio, Producer
+from movies.models import Movie, Studio, Producer
 import csv
 
 class Command(BaseCommand):
