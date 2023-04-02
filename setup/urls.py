@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from setup import settings
 from rest_framework import routers
 from movies.views import MovieViewSet, StudioViewSet, ProducerViewSet
+from .swagger import schema_view
+
 
 router = routers.DefaultRouter()
 router.register(r'movies', MovieViewSet)
@@ -25,5 +29,6 @@ router.register(r'producers', ProducerViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('', include(router.urls)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
