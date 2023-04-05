@@ -1,6 +1,7 @@
 
 # Texo IT - Teste Técnico 💻
-Esta aplicação tem como objetivo fornecer informações através das rotas disponiveis, dos indicados e vendedores da categoria Pior Filme do Golden Raspberry Awards.
+Esta aplicação tem como objetivo fornecer informações, dos indicados e vendedores da categoria Pior Filme do Golden Raspberry Awards.
+
 
 ## Rodando localmente ⚙️
 
@@ -104,6 +105,10 @@ após subir aplição, documentação swagger disponível [aqui](http://127.0.0.
   + `POST /producers/` - Cria um novo produtor
   + `PUT /producers/:id/` -  Atualiza um produtor existente
   + `DELETE /producers/:id/` -  Deleta um produtor existente
+
+####  Premiação
+
+  + `GET /producer-prizes/` - Retorna Informações sobre o intervalo entre os prêmios dos produtoes
 
 
 ## Autores 🎯
