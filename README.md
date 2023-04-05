@@ -1,6 +1,6 @@
 
 # Texo IT - Teste Técnico 💻
-API Python, desenvolvida usando Django REST Framework, tem como objetivo fornecer informações, dos indicados e vendedores da categoria Pior Filme do Golden Raspberry Awards.
+API Python, desenvolvida usando Django REST Framework, tem como objetivo fornecer informações dos indicados e vendedores da categoria Pior Filme do Golden Raspberry Awards.
 
 
 ## Rodando localmente ⚙️
