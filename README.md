@@ -83,7 +83,7 @@ após subir aplição, documentação swagger disponível [aqui](http://127.0.0.
 ## Rotas 🌐
 ####  Filmes
 
- + `GET /movies/` - Retorna uma lista com todos os filmes cadastrados
+  + `GET /movies/` - Retorna uma lista com todos os filmes cadastrados
   + `GET /movies/:id/` - Retorna os detalhes de um filme específico
   + `POST /movies/` - Cria um novo filme
   + `PUT /movies/:id/` -  Atualiza um filme existente
@@ -91,7 +91,7 @@ após subir aplição, documentação swagger disponível [aqui](http://127.0.0.
 
 ####  Estúdios
 
- + `GET /studios/` - Retorna uma lista com todos os estúdios cadastrados
+  + `GET /studios/` - Retorna uma lista com todos os estúdios cadastrados
   + `GET /studios/:id/` - Retorna os detalhes de um estúdio específico
   + `POST /studios/` - Cria um novo estúdio
   + `PUT /studios/:id/` -  Atualiza um estúdio existente
@@ -99,7 +99,7 @@ após subir aplição, documentação swagger disponível [aqui](http://127.0.0.
 
 ####  Produtores
 
- + `GET /producers/` - Retorna uma lista com todos os produtores cadastrados
+  + `GET /producers/` - Retorna uma lista com todos os produtores cadastrados
   + `GET /producers/:id/` - Retorna os detalhes de um produtor específico
   + `POST /producers/` - Cria um novo produtor
   + `PUT /producers/:id/` -  Atualiza um produtor existente
