@@ -1,7 +1,8 @@
-from django.views import View
 from django.http import JsonResponse
-from rest_framework import viewsets
+from rest_framework import viewsets, views
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework.response import Response
+from setup.swagger import producer_prize_response
 from .models import Movie, Studio, Producer
 from .serializers import MovieSerializer, StudioSerializer, ProducerSerializer
 
@@ -23,7 +24,9 @@ class MovieViewSet(viewsets.ModelViewSet):
         serializer.save()
         return Response(serializer.data)
 
-class ProducerPrizesView(View):
+class ProducerPrizesView(views.APIView):
+    
+    @swagger_auto_schema(operation_description='Return max and min interval between prizes', responses=producer_prize_response)
     def get(self, request, *args, **kwargs):
         producers = Producer.objects.filter(movie__winner=True).distinct()
         min_interval = 999
