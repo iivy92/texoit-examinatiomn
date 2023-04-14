@@ -24,8 +24,8 @@ from .swagger import schema_view
 
 router = routers.DefaultRouter()
 router.register(r'movies', MovieViewSet)
-router.register(r'studios', StudioViewSet)
 router.register(r'producers', ProducerViewSet)
+router.register(r'studios', StudioViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
