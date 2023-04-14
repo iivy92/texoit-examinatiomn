@@ -26,7 +26,11 @@ class MovieViewSet(viewsets.ModelViewSet):
 
 class ProducerPrizesView(views.APIView):
     
-    @swagger_auto_schema(operation_description='Return max and min interval between prizes', responses=producer_prize_response)
+    @swagger_auto_schema(
+        operation_description='Return max and min interval between prizes', 
+        tags=['prizes'], 
+        responses=producer_prize_response
+    )
     def get(self, request, *args, **kwargs):
         producers = Producer.objects.filter(movie__winner=True).distinct()
         min_interval = 999
